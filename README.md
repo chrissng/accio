@@ -13,20 +13,21 @@ The code can be found under the `src/` directory, tests are under the `test` dir
 The main modules are roughly the following.
 
   - `fr/cnrs/liris/accio`: command-line tool automating experiments, by configuring, launching them and creating visual reports.
-  It the most interesting part regarding my thesis, containing implementation of domain objects and algorithms.
-  - `fr/cnrs/liris/privamov/service/gateway`: query service providing access to Priva'Mov data (older version).
-  - `fr/cnrs/liris/privamov/service/query`: query service providing access to Priva'Mov data (newer version, WIP).
-  - `fr/cnrs/liris/privamov/job/indexer`: job indexing a dataset into Elasticsearch, to make it available to the query service
-  - `fr/cnrs/liris/privamov/viz`: frontend of the demonstrator used in the Priva'Mov project.
+  It only contains the framework, not the implementation of the various modules.
+  - `fr/cnrs/liris/privamov/core`:  contains implementation of domain objects and algorithms.
+  - `fr/cnrs/liris/privamov/ops`:  contains implementation of Accio operators using core algorithms.
+  - `fr/cnrs/liris/privamov/gateway`: query service providing access to Priva'Mov data (older version).
+  - `fr/cnrs/liris/privamov/query`: query service providing access to Priva'Mov data (newer version, WIP).
+  - `fr/cnrs/liris/privamov/indexer`: job indexing a dataset into Elasticsearch, to make it available to the query service
   - `fr/cnrs/liris/common`: generic code used throughout the other modules. It is somewhat generic and not coupled with other specific code.
-  - `fr/cnrs/liris/profiler`: profiler enabling code instrumentation.
   - `com/twitter/querulous`: code of Twitter's Querulous library, with some additions (notably to handle PostgreSQL).
   - `com/google/common/geometry`: code of Google'S2 library, which is otherwise not available on Maven.
 
 Except for code borrowed from other projects, everything else is distributed under the french CeCILL
 license, largely compatible with the GNU GPL license.
 
-More documentation about specific aspects can be found under the `docs` directory.
+More documentation about Accio can be found under the `docs` directory.
+It is used to generate a Jekyll website.
 Configuration files, including infrastructure management, can be found under the `etc` directory.
 A Vagrant environment including all necessary tools to compile the code is available.
 
