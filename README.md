@@ -13,9 +13,9 @@ The code can be found under the `src/` directory, tests are under the `test` dir
 The main modules are roughly the following.
 
   - `fr/cnrs/liris/accio`: command-line tool automating experiments, by configuring, launching them and creating visual reports.
-  It only contains the framework, not the implementation of the various modules.
-  - `fr/cnrs/liris/privamov/core`:  contains implementation of domain objects and algorithms.
-  - `fr/cnrs/liris/privamov/ops`:  contains implementation of Accio operators using core algorithms.
+  It only contains the framework, not the implementation of the various operators.
+  - `fr/cnrs/liris/privamov/core`:  contains implementation of domain objects and of some generic algorithms. Independent from Accio.
+  - `fr/cnrs/liris/privamov/ops`:  contains implementation of Accio operators using core algorithms and new algorithms.
   - `fr/cnrs/liris/privamov/gateway`: query service providing access to Priva'Mov data (older version).
   - `fr/cnrs/liris/privamov/query`: query service providing access to Priva'Mov data (newer version, WIP).
   - `fr/cnrs/liris/privamov/indexer`: job indexing a dataset into Elasticsearch, to make it available to the query service
