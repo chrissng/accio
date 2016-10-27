@@ -1,6 +1,8 @@
 About this repository
 =====================
 
+[![Build Status](https://travis-ci.com/pvcnt/location-privacy.svg?token=iq89JpmicdUts87rvWPk&branch=master)](https://travis-ci.com/pvcnt/location-privacy)
+
 This repository contains the code of all experiments ran during my PhD thesis.
 It provides several modules, some of them that could be reused outside of the context of my thesis, some of them tightly related to what I am doing, i.e., location privacy.
 It does *not* contain the source code of my papers.
